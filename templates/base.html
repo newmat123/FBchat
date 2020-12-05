@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSBR-Løn</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" href="{% static 'pics/Branvsen-Gul.png' %}">
+    
+</head>
+<body>
+    <div id="wrap">
+      
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <footer class="pt-5 myfooter">
+
+        <div class="container-fluid text-center">
+
+            <div class="row pb-5">
+                <div class="col-md-6 mt-md-0 mt-3 ml-auto mr-auto mw">
+
+                    <h5 class="text-uppercase font-weight-bold">om siden</h5>
+                    <p>
+                        Denne hjemmeside er udviklet med fokus på at gøre det letter
+                        for brandmændene i MSBR at holde styr på sin løn og timer.
+                        Skriv endelig ind, hvis du sidder inde
+                        med nogle forslag til forbedringer, eller har brug for hjælp.
+                    </p>
+                    <h6 class="pt-3">VIGTIGT!</h6>
+                    <p>
+                        Hjemmesiden er kun vejledende, og tager ikke højde for 
+                        alle faktorer i forhold til den beregnede løn.
+                        Derudover er det ens eget ansvar at indtaste de korrekte informationer.
+                    </p>
+
+                </div>
+                <div class="col-md-6 mb-md-0 mb-3 ml-auto mr-auto pt-5">
+
+                    <h5 class="text-uppercase font-weight-bold">Kontakt oplysninger</h5>
+                    <h6>tlf: 41319170</h6>
+                    <h6>Email: nicklas9211@gmail.com</h6>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-copyright text-center py-3 bg-dark text-white-50">
+            <div class="container text-center">
+                <small>Copyright &copy; <a href="https://newmat123.pythonanywhere.com/"> newmat123.pythonanywhere.com</a></small>
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+</html>

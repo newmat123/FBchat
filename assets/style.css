@@ -1,0 +1,105 @@
+html, body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+.center{
+    text-align: center;
+}
+
+.mar{
+    margin: 5%;
+}
+
+.textBox{
+    margin: auto;
+    max-width: 400px;
+}
+
+
+
+ul li{
+    display: inline-block;
+}
+ul li a{
+    position: relative;
+}
+ul li a:last-child{
+    margin-right: 0;
+}
+ul li a::before,
+ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 0, 0);
+    left: 0;
+    transform: scaleX(0);
+    transition: all 0.5s;
+}
+ul li a::before{
+    transform-origin: left;
+    top:0;
+}
+ul li a::after{
+    transform-origin: right;
+    bottom: 0;
+}
+ul li a:hover::before,
+ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+
+.piecontainer{
+    margin:auto; 
+    margin-top:3%; 
+    margin-bottom:3%;
+}
+.pie{
+    max-width: 600px; 
+    margin:auto;
+    margin-top: 75px;
+}
+
+
+.card{
+    max-width: 500px; 
+    align-items: center;
+}
+
+
+.myfooter{
+    background-color: #9e9e9e;
+}
+.mw{
+    max-width: 500px;
+}
+
+
+ 
+.labelinside {
+    display: block; 
+    position: relative; 
+}
+label input {
+    display: none;
+}
+label span {
+    border: 1px solid #ccc; 
+    line-height: 1; 
+    text-align: center; 
+    border-radius: 10%; 
+    font-size: 10pt; 
+    left: 0; 
+    padding: 5px;
+    margin: auto;
+}
+input:checked + span {
+    background: #ccf; border-color: #ccf;
+}
+

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="mar">
+        <div class="card-body">
+            <div class="textBox center" style="max-width: 700px;">
+                <h1>welcome, please login</h1>
+            </div>
+            
+            <div class="piecontainer">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">tlf:</label><br>
+                        <input name="tlfNumber" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Password:</label><br>
+                        <input name="Password" type="password">
+                    </div>
+                    <input type="Submit" name="login" class="btn btn-success"/>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    
+{% endblock %}
