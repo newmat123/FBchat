@@ -10,18 +10,21 @@
             <div class="mar">
                 <div class="card-body">
                     <table class="center table table-striped">
-                        <form action="" method="get">
-                            {% for e in chats %}
-                                {% if e.is_friend %}
+                        <form action="" method="post">
+
+                            {% csrf_token %}
+
+                            <input type="text" name="txt">
+                            <button type="Submit" name="sendtext" class="btn btn-info">send</button>
+
+                            {% for e in messeges %}
                             
-                                    <tr>
-                                        <td><img src="{{e.photo}}" alt=""></td>
-                                        <td>{{e.name}}</td>
-                                        <td><button type="Submit" value="{{e.uid}}" name="open" class="btn btn-info">åben</button></td>
-                                    </tr>
-                                {% endif %}
+                                <tr>
+                                    <td>{{e.text}}</td>
+                                </tr>
     
                             {% endfor %}
+
                         </form>
                     </table>
                 </div>
@@ -31,21 +34,3 @@
     </div>
     
 {% endblock %}
-
-
-User(uid='100005128806107', 
-type=ThreadType.USER, 
-photo='https://scontent-cph2-1.xx.fbcdn.net/v/t31.0-1/cp0/p32x32/29983035_915584071955878_3622595899662452183_o.jpg?_nc_cat=109&ccb=2&_nc_sid=0081f9&_nc_ohc=4_CxxUZOdzoAX_5rPKa&_nc_ht=scontent-cph2-1.xx&tp=27&oh=926237b0c55d17d9b243dbe30c591d96&oe=5FF17DB3', 
-name='Gert Olsen', 
-last_message_timestamp=None, 
-message_count=None, 
-plan=None, 
-url='https://www.facebook.com/gert.olsen.104', 
-first_name='Gert', 
-last_name=None, 
-is_friend=True, 
-gender='male_singular', 
-affinity=None, nickname=None, 
-own_nickname=None, 
-color=None, 
-emoji=None)

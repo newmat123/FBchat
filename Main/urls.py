@@ -20,6 +20,12 @@ from Login import views as loginViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', loginViews.login),
+
+    path('', loginViews.login, name='home'),
+    path('data/', loginViews.getData, name='data'),
+    path('chat/', loginViews.chat, name='chat'),
+
+
+
 
 ]
